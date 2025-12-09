@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TechArt Studio — Creative Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Fondo animado/gradiente -->
+    <div class="bg-animate" aria-hidden="true"></div>
+
+    <!-- Botón flotante WhatsApp -->
+    <a class="whatsapp-btn" href="https://wa.me/5934318586" target="_blank" aria-label="Contactar por WhatsApp">💬</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div class="logo-mark">🛸</div>
+                <div class="brand-text">
+                    <div class="brand-title">TechArt Studio</div>
+                    <small class="brand-sub">creative & digital</small>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <a href="#servicios">Servicios</a>
+                <a href="#precios">Precios</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto" class="cta">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero container">
+            <div class="hero-left">
+                <h1 class="hero-title">Diseño creativo que <span class="neon">eleva</span> tu marca</h1>
+                <p class="lead">Branding, redes, banners y campañas con estilo único — pensado para startups y proyectos
+                    valientes.</p>
+                <div class="hero-actions">
+                    <a href="#precios" class="btn btn-primary">Cotiza rápido</a>
+                    <a href="#portafolio" class="btn btn-ghost">Ver portfolio</a>
+                </div>
+                <div class="skill-badges">
+                    <span>Branding</span>
+                    <span>UI/UX</span>
+                    <span>Social</span>
+                    <span>Motion</span>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="mockup glass">
+                    <img src="ejemplo 0.jpg" alt="Mockup diseño" loading="lazy">                   
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="section container">
+            <h2 class="section-title">Servicios</h2>
+            <p class="section-sub">Soluciones visuales pensadas para impactar y convertir.</p>
+
+            <div class="cards">
+                <article class="card glass">
+                    <h3>Branding & Logo</h3>
+                    <p>Identidades memorables, manual básico y versiones para redes.</p>
+                </article>
+
+                <article class="card glass">
+                    <h3>Contenido para Redes</h3>
+                    <p>Pack mensual de posts, historias y reels adaptados a tu público.</p>
+                </article>
+
+                <article class="card glass">
+                    <h3>Publicidad Digital</h3>
+                    <p>Creatividades optimizadas para conversiones en Facebook/Instagram.</p>
+                </article>
+
+                <article class="card glass">
+                    <h3>Landing & UI</h3>
+                    <p>Páginas pensadas para convertir visitantes en clientes.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- GENERADOR DE PRECIOS -->
+        <section id="precios" class="section container">
+            <h2 class="section-title">Generador de precios</h2>
+            <p class="section-sub">Elige servicios y obtén un estimado instantáneo (sin registro).</p>
+
+            <div class="price-panel glass">
+                <div class="price-items">
+                    <label><input type="checkbox" class="item" value="25"> Logotipo — $25</label>
+                    <label><input type="checkbox" class="item" value="18"> Paquete Redes (3 posts) — $18</label>
+                    <label><input type="checkbox" class="item" value="22"> Banner Web — $22</label>
+                    <label><input type="checkbox" class="item" value="12"> Flyer digital — $12</label>
+                    <label><input type="checkbox" class="item" value="40"> Pack Branding (3 piezas) — $40</label>
+                </div>
+
+                <div class="price-result">
+                    <div class="total">Total estimado</div>
+                    <div class="amount">$<span id="total">0</span></div>
+                    <small class="note">Este es un estimado. Clic en "Contactar" para confirmar.</small>
+                    <div class="price-actions">
+                        <button class="btn btn-primary" onclick="abrirWhatsAppConTotal()">Contactar</button>
+                        <button class="btn btn-ghost" onclick="resetPrices()">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTAFOLIO FILTRABLE -->
+        <section id="portafolio" class="section container">
+            <h2 class="section-title">Portafolio</h2>
+            <p class="section-sub">Una selección de proyectos recientes.</p>
+
+            <div class="filters">
+                <button class="filter active" onclick="filtrar('todo')">Todo</button>
+                <button class="filter" onclick="filtrar('logo')">Logos</button>
+                <button class="filter" onclick="filtrar('redes')">Redes</button>
+                <button class="filter" onclick="filtrar('banner')">Banners</button>
+            </div>
+
+            <div class="galeria-grid">
+                <figure class="thumb logo"><img src="ejemplo 0.jpg" alt="Proyecto logo" loading="lazy"></figure>
+                <figure class="thumb redes"><img src="ejemplo 1.jpg" alt="Proyecto redes" loading="lazy"></figure>
+                <figure class="thumb banner"><img src="ejemplo 2.jpg" alt="Proyecto banner" loading="lazy"></figure>
+                <figure class="thumb redes"><img src="ejemplo 3.jpg" alt="Proyecto social(Segumos construtendolo)" loading="lazy"></figure>
+                <figure class="thumb logo"><img src="logo luz inti.jpg" alt="Proyecto logo 2" loading="lazy"></figure>
+            </div>
+        </section>
+
+        <!-- BEFORE & AFTER CON SLIDER -->
+        <section class="section container">
+            <h2 class="section-title">Antes / Después</h2>
+            <p class="section-sub">Comparación rápida para mostrar impacto.</p>
+
+            <div class="ba-panel glass">
+                <div class="ba-wrapper">
+                    <img src="antes.jpg" alt="Antes" class="ba-img left">
+                    <img src="despues.jpg" alt="Después" class="ba-img right">
+                    <input class="ba-range" type="range" min="0" max="100" value="50"
+                        aria-label="Control antes después">
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO SIMPLE (envía a WhatsApp, no guarda datos) -->
+        <section id="contacto" class="section container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-sub">Sin registros. Solo una conversación directa por WhatsApp.</p>
+
+            <form class="contact-form glass" onsubmit="enviarWhatsApp(event)">
+                <input id="nombre" type="text" placeholder="Tu nombre" required>
+                <input id="email" type="email" placeholder="Tu email (opcional)">
+                <textarea id="mensaje" placeholder="Cuéntanos tu proyecto" required></textarea>
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                    <button class="btn btn-ghost" type="button" onclick="limpiarContacto()">Limpiar</button>
+                </div>
+                <small class="privacy">No almacenamos tus datos. Este formulario solo abre WhatsApp.</small>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2025 TechArt Studio — Creative Agency</p>
+            <nav class="foot-nav">
+                <a href="#servicios">Servicios</a>
+                <a href="#portafolio">Portafolio</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS (sin backend, todo en cliente) -->
+    <script>
+        // Generador de precios (cliente)
+        const checks = document.querySelectorAll('.item');
+        const totalTxt = document.getElementById('total');
+
+        // Hay múltiples checkboxes creados en la sección de precios; seleccionamos por clase
+        document.querySelectorAll('.price-panel .item, .price-panel input[type="checkbox"]').forEach(() => { /* placeholder to ensure doc query works on some hosts */ });
+
+        // Inicializamos escucha (seleccionamos inputs dentro de price-panel)
+        document.querySelectorAll('.price-panel input[type="checkbox"]').forEach(cb => {
+            cb.addEventListener('change', actualizarTotal);
+        });
+
+        function actualizarTotal() {
+            let total = 0;
+            document.querySelectorAll('.price-panel input[type="checkbox"]').forEach(i => {
+                if (i.checked) total += parseInt(i.value || 0, 10);
+            });
+            totalTxt.textContent = total;
+        }
+
+        function resetPrices() {
+            document.querySelectorAll('.price-panel input[type="checkbox"]').forEach(i => i.checked = false);
+            actualizarTotal();
+        }
+
+        function abrirWhatsAppConTotal() {
+            const total = totalTxt.textContent || '0';
+            const url = `https://wa.me/593XXXXXXXXX?text=${encodeURIComponent('Hola, estoy interesado en un servicio. Total estimado: $' + total)}`;
+            window.open(url, '_blank');
+        }
+
+        // Filtro de portafolio
+        function filtrar(categoria) {
+            document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+            // marcar botón activo
+            Array.from(document.querySelectorAll('.filter')).find(b => b.textContent.toLowerCase() === categoria || (categoria === 'todo' && b.textContent.toLowerCase() === 'todo'))?.classList.add('active');
+
+            document.querySelectorAll('.galeria-grid .thumb').forEach(fig => {
+                if (categoria === 'todo') {
+                    fig.style.display = 'block';
+                } else {
+                    fig.style.display = fig.classList.contains(categoria) ? 'block' : 'none';
+                }
+            });
+        }
+
+        // Antes / Después slider
+        const range = document.querySelector('.ba-range');
+        if (range) {
+            const left = document.querySelector('.ba-img.left');
+            const right = document.querySelector('.ba-img.right');
+            range.addEventListener('input', e => {
+                const val = e.target.value;
+                // width of right image overlay
+                right.style.clipPath = `inset(0 ${100 - val}% 0 0)`;
+            });
+            // activar estado inicial
+            range.dispatchEvent(new Event('input'));
+        }
+
+        // Contacto -> WhatsApp (no almacena)
+        function enviarWhatsApp(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value || '';
+            const email = document.getElementById('email').value || '';
+            const msg = document.getElementById('mensaje').value || '';
+
+            const texto = `Hola, soy ${nombre}. ${email ? 'Email: ' + email + '. ' : ''}Mensaje: ${msg}`;
+            const url = `https://wa.me/593XXXXXXXXX?text=${encodeURIComponent(texto)}`;
+            window.open(url, '_blank');
+        }
+
+        function limpiarContacto() {
+            document.getElementById('nombre').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('mensaje').value = '';
+        }
+
+        // Mejora: activar filtros por defecto
+        filtrar('todo');
+    </script>
+</body>
+
+</html>
